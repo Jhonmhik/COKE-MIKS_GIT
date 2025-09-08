@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
  
-}
  
 body {
   font-family: Arial, sans-serif;
@@ -18,6 +17,7 @@ header {
   align-items: center;
   padding: 20px 10%;
   background-color: white;
+  
 }
  
  
@@ -182,27 +182,49 @@ li a{
  
 .btn:hover {
   background-color: #b00610;
+
 }
 
-@media (max-width: 900px) {
-  header {
-    flex-direction: column;
-    padding: 20px 5%;
-    gap: 20px;
-  }
-
-  @media (max-width: 1200px) {
+@media (max-width: 768px) {
   .hero {
-    padding: 0 5%;
+    flex-direction: column;
+    height: auto;
+    padding: 40px 5%;
+    text-align: center;
   }
-
-  @media (max-width: 600px) {
-  .evolution {
-    padding: 30px 2%;
+ 
+  .circle {
+    width: 400px;
+    height: 400px;
+    margin-top: 200px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
   }
-
-  .evolution h2 {
-    font-size: 1.5rem;
+ 
+  .content {
+    top: 0;
+    max-width: 100%;
   }
-
+ 
+  .coke-can {
+    position: static;
+    height: 300px;
+    margin-top: 20px;
+  }
+ 
+  header {
+    align-items: center;
+    gap: 15px;
+    display: flex;
+  }
+ 
+  ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   
+}
+}
+
