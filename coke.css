@@ -1,57 +1,66 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
  
 }
-
+ 
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-
-
+  margin: 0;
+  padding: 0;
 }
-
-
+ 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: white;
+}
+ 
+ 
 .hero {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   background: #fff;
   overflow: hidden;
   display: flex;
   align-items: center;
   padding: 0 10%;
-
 }
-
-.circle {
-  width: 800px;
-  height: 700px;
-  background: #ff0000;
-  border-radius: 500px;
-  position: absolute;
-  right: -17%;
-  bottom: -17%;
-  height: 800px;
  
+.circle {
+  width: 600px;
+  height: 600px;
+  background: #ff0000;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 75%;
+ 
+  z-index: 1;
 }
-
+ 
 .content {
   position: relative;
+  top: -15%;
+  z-index: 2;
   max-width: 500px;
-
 }
-
+ 
 .content h1 {
   font-size: 3rem;
   color: #222;
 }
-
+ 
 .content p {
   margin: 20px 0;
   font-size: 1.2rem;
   color: #555;
 }
-
+ 
 button {
   background: #ff0000;
   color: white;
@@ -61,42 +70,137 @@ button {
   cursor: pointer;
   border-radius: 25px;
 }
-
+ 
 .coke-can {
   position: absolute;
-  right: -5%;
+  top: 2%;
+  right: 1%;
   bottom: 15%;
-  height: 600px;
+  height: 400px;
   z-index: 2;
-  padding: 30px;
-  width: 200;
-  
 }
-.logo{
+ 
+.logo {
   display: flex;
+  position: relative;
+  left: -60px;
   height: 100px;
   width: 100px;
-
 }
-ul{
+ 
+ul {
   list-style: none;
   display: flex;
-  padding: 30px;
   gap: 30px;
-  font-size: x-large;  
 }
-header{
-  display: flex;
-  align-items: center;
-  padding:  20px 10%;
-  background-color: #ffffff;
-  position: absolute;
-  z-index: 1;
-  justify-content: space-between  ;
-  width: 80%;
-}
+ 
 li a{
   text-decoration: none;
   color: red;
-
 }
+ 
+.evolution {
+  text-align: center;
+  padding: 60px 10%;
+  background: #f5f5f5;
+}
+ 
+.evolution h2 {
+  color: #e50914;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+ 
+.evolution .subtitle {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+ 
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+ 
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.2s;
+}
+ 
+.card:hover {
+  transform: translateY(-5px);
+}
+ 
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  background-color: #ffeef1;
+  padding: 20px;
+}
+ 
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+ 
+.tag {
+  display: inline-block;
+  font-size: 14px;
+  color: #e50914;
+  background-color: #ffeef1;
+  padding: 3px 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+ 
+.card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+ 
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #e50914;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+ 
+.btn:hover {
+  background-color: #b00610;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    padding: 20px 5%;
+    gap: 20px;
+  }
+
+  @media (max-width: 1200px) {
+  .hero {
+    padding: 0 5%;
+  }
+
+  @media (max-width: 600px) {
+  .evolution {
+    padding: 30px 2%;
+  }
+
+  .evolution h2 {
+    font-size: 1.5rem;
+  }
